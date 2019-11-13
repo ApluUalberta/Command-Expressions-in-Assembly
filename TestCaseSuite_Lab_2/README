@@ -1,0 +1,64 @@
+CMPUT 229 - README File for test cases for Lab 2 
+================================================
+
+
+1. Disclaimer: this files are provided "as-is" for your convenience,
+and they are not an exhaustive set of tests for your program (i.e. if
+your code passes all tests it does not imply you will get full marks). 
+This is provided as additional support material for your assignment
+and you are ultimately responsible for using it correctly.
+
+These test cases only work on Linux (with spim 8.0).  
+
+2. Contents:
+
+	- Folder "tests": contains the test case. For each test case
+	there is three files: *.s (the actual instructions), *.bin 
+	and *.out (expected output created by using your code with
+	common.s).
+	- Several bash scripts (we talk about those below).
+	- common.s (Testing harness).
+
+3. Usage 
+
+- Pre-requirements:
+	* spim 8.0
+	* A bash console.
+
+- To use the existing set of tests:  
+
+	a) Copy your subroutine code in a separate file in the same
+	folder as the rest of the scripts. 
+
+	b) Run "sh runAllTests.sh <name_of_your_file>". 
+
+	c) If all the three tests cases pass, you will see something
+	like this:
+
+Running tests on solution.s
+testcase1.bin : Passed
+testcase2.bin : Passed
+testcase3.bin : Passed
+
+	If not, you will get a "diff" screen comparing the expected output
+	file vs the actual output. For more information on how diff works,
+	type "man diff" in the console. 
+
+- To generate your own test cases:
+
+        a) Create new .s files in the folder "tests" 
+           --- use the existing .s files in the folder "tests" as examples
+ 
+        b) Run "sh compileTests.sh" --- this will generate the new .bin files for your new tests. You can run your solution against your tests but we do not have a mechanism to provide you with the expected output for these tests.
+        
+
+4. Troubleshooting
+
+	If spim hangs after running a script, you can stop the execution
+	using "sh stopHang.sh" on the same or in another terminal. 
+	Note that using "killall spim" is as effective. 
+ 
+
+
+
+
